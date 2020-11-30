@@ -6,6 +6,8 @@
 # 14 23 22 21 8
 # 13 12 11 10 9
 
+# in progress
+
 n = int(input())
 sp = [[0 for j in range(n)] for i in range(n)]
 
