@@ -11,27 +11,42 @@
 n = int(input())
 sp = [[0 for j in range(n)] for i in range(n)]
 
-x, d, s, i, j = 0, 0, 1, n - 1, 0
+x, d, s = 1, 0, 1,
+di, dj = 0, 0 # координаты угловых точек
 v = 0  # вектор 0 - слева направо, 1 - сверху вниз, 2 - справа налево, 3 - снизу вверх
 
 while x < n * n:
-    d = n - s // 2
-    x += d
-    v = s % 4
-    s += 1
+    d = n - s // 2 # расчет "приращения" от предыдущего x к текущему
 
     if v == 0:
-         j -= d
+        for j in range(dj, dj + d):
+             sp[di][j] = x
+             x += 1
+        di += 1
+        dj += d - 1
     elif v == 1:
-        i -= d
+        for i in range(di, di + d):
+            sp[i][dj] = x
+            x += 1
+        di += d - 1
+        dj -= 1
     elif v == 2:
-        j += d
+        for j in range(dj, dj - d, -1):
+            sp[di][j] = x
+            x += 1
+        di -= 1
+        dj -= d - 1
     elif v == 3:
-        i += d
+        for i in range(di, di - d, - 1):
+            sp[i][dj] = x
+            x += 1
+        di -= d - 1
+        dj += 1
 
-    print(x, i, j)
+    v = s % 4 # определяем направление
+    s += 1 # увеличиваем шаг на единицу
 
-# for i in range(n-1):
-#     for j in range(n-1):
-#         print(sp[i][j], end = ' ')
-#     print()
+for i in range(n):
+    for j in range(n):
+        print(sp[i][j], end = ' ')
+    print()
