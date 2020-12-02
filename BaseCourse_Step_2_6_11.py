@@ -11,31 +11,22 @@
 n = int(input())
 sp = [[0 for j in range(n)] for i in range(n)]
 
-x, d, s, = 0, 0, 1
-vektor = 0  # 0 - слева направо
-            # 1 - сверху вниз
-            # 2 - справа налево
-            # 3 - снизу вверх
-otstup = 0
-shag = 1
-delta = 0
+x, d, s, i, j = 0, 0, 1, n - 1, 0
+v = 0  # вектор 0 - слева направо, 1 - сверху вниз, 2 - справа налево, 3 - снизу вверх
 
-i, j, y, sm = n - 1,0, n-1, 0
-
-x=0
-while x<n*n:
-    d = n - shag // 2
+while x < n * n:
+    d = n - s // 2
     x += d
-    vektor = shag % 4
-    shag += 1
+    v = s % 4
+    s += 1
 
-    if vektor == 0:
+    if v == 0:
          j -= d
-    elif vektor == 1:
+    elif v == 1:
         i -= d
-    elif vektor == 2:
+    elif v == 2:
         j += d
-    elif vektor == 3:
+    elif v == 3:
         i += d
 
     print(x, i, j)
