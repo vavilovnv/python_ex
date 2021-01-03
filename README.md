@@ -1,4 +1,4 @@
-# python_ex
+# Python exercises
 ~Немножко говнокода~ 
 Решение задач из курсов stepik.org по Python:
 1. Course - programming with Python https://stepik.org/course/67/syllabus
