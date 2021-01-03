@@ -1,3 +1,4 @@
+# По мотивам https://stepik.org/lesson/7629/step/1?unit=1285
 # Построить и вывести график
 
 from pylab import *
