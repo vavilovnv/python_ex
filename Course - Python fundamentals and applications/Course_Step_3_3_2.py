@@ -4,7 +4,7 @@ import requests
 import re
 
 pattern = r'(<a.*href[ ]?=[ ]? ?.)(http:\/\/|https:\/\/|ftp:\/\/)?([\w._-]*)'
-text = requests.get(input().strip()'').text # 'https://pastebin.com/raw/7543p0ns'
+text = requests.get(input().strip()).text # 'https://pastebin.com/raw/7543p0ns'
 
 urls, urls_out = re.findall(pattern, text), set()
 for url in urls:
