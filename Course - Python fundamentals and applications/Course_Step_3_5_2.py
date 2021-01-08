@@ -3,8 +3,8 @@
 import requests
 import json
 
-client_id = 'fedf943c7c8fb509dafc'
-client_secret = 'b918a9cd0701d7d1756cf058dde8c93f'
+client_id = '...'
+client_secret = '...'
 
 # запрос на получение токена
 r = requests.post("https://api.artsy.net/api/tokens/xapp_token",
@@ -29,6 +29,9 @@ with open('input.txt') as f:
         ans = json.loads(res.text)
         artists[ans['sortable_name']] = ans['birthday']
 
+with open('output.txt', 'w', encoding='utf-8') as f:
+    for i in sorted(artists.items(), key=lambda x: (x[1], x[0])):
+        f.writelines(i[0]+'\n')
 
 
 
