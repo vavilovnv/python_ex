@@ -21,15 +21,17 @@
 
 from xml.etree import ElementTree
 
-def count_weight(i, r):
+
+def count_weight(weight, r):
     i += 1
     for child in r:
         d[child.attrib["color"]] += i
         count_weight(i, child)
 
+
 root = ElementTree.fromstring(input())
-d, i = {"red": 0, "green": 0, "blue": 0}, 1
-d[root.attrib["color"]] = i
-count_weight(i, root)
+d, weight = {"red": 0, "green": 0, "blue": 0}, 1
+d[root.attrib["color"]] = weight
+count_weight(weight, root)
 
 print(d["red"], d["green"], d["blue"])
