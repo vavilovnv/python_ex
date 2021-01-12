@@ -1,10 +1,11 @@
 # По мотивам https://stepik.org/lesson/7629/step/2?unit=1285
+
 # Построить и вывести гистограмму
 
 from numpy import *
-n = random.randn(100000)
-
 from pylab import *
+
+n = random.randn(100000)
 fig, axes = subplots(1, 2, figsize = (12, 4))
 
 axes[0].hist(n)
