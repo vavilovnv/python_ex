@@ -16,7 +16,7 @@
 
 import xlrd
 import requests
-import wget
+# import wget
 
 # wget.download('https://stepik.org/media/attachments/lesson/245266/tab.xlsx')
 # wb = xlrd.open_workbook('tab.xlsx')
