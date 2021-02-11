@@ -7,12 +7,14 @@
 # "Как обозначается заправка в OpenStreetMap" - пример хорошего запроса чтобы узнать, как обозначается заправка в
 # OpenStreetMap.
 
-import os, wget
+import os, requests
 import xml.etree.ElementTree as ET
 
 osmfile = 'map2.osm'
+res = requests.get('https://stepik.org/media/attachments/lesson/245681/' + osmfile)
 if not os.access(osmfile, os.F_OK):
-    wget.download('https://stepik.org/media/attachments/lesson/245681/' + osmfile)
+    with open(osmfile, 'wb') as f:
+        f.write(res.content)
 print(len(ET.parse(osmfile).getroot().findall("./node/tag[@v='fuel']")))
 
 
