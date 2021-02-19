@@ -16,24 +16,31 @@ def what_weather(city):
     else:
         return '<ошибка на сервере погоды. попробуйте позже>'
 
-    
-def what_temperature(weather):     
+def what_temperature(weather):    
     if (weather == '<сетевая ошибка>' or
         weather == '<ошибка на сервере погоды. попробуйте позже>'):
         return weather
-    # Получите часть строки с температурой из weather и сохраните в temperature
     temperature = weather.split()[1]
     parsed_temperature = ''
     for char in temperature:
-        # Температура может быть и отрицательной, предусмотрите это:
-        # если встретился символ "минус" — добавьте его в переменную parsed_temperature        
         if char == '-':
             parsed_temperature += char
         try:
-            # Попробуйте привести символ char к целому числу. 
             num = int(char)
-            # Если символ приводится к числу — добавьте его в переменную parsed_temperature
             parsed_temperature += char
         except ValueError:
             continue
     return parsed_temperature
+
+def what_conclusion(parsed_temperature):
+    try:
+        temperature = int(parsed_temperature)
+        if temperature < 18:
+            return 'Слишком холодно для мороженого'
+        elif 18 <= temperature <= 27:
+            return 'Поесть мороженое в самый раз'
+        else:
+            return 'Очень жарко, надо есть мороженое быстро, иначе оно растает'
+            
+    except ValueError:
+        return 'Не могу узнать погоду...'

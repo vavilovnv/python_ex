@@ -1,7 +1,7 @@
 # Django settings for anfisa4friends project.
 import os
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0+-ju&2t-r7==7gs&_@-#q8om7i&lelii&as$b*sjc(j7xcgvv'
+SECRET_KEY = '***' # в продакшне заменить рабочим ключом
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -26,8 +26,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-   
+    'django.middleware.common.CommonMiddleware',    
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
