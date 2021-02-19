@@ -6,7 +6,23 @@
   <body>
       <h1>Анфиса для друзей</h1>
        <img src="https://pictures.s3.yandex.net/resources/anfisa_1594642601.png">
-       <br>     
-      <a href="/icecream/">К списку мороженого</a>
+       <br>
+      <p>
+        {{ friend_output }}
+      </p>
+      <p>
+        {{ city_weather }}
+      </p>
+      <p>
+        Числовое значение температуры: {{ parsed_temperature }}
+      </p>
+      <form action="/" method="post">
+        <h2>Выберите друга</h2>
+          {{ friends|safe }}
+        <h2>Выберите мороженое</h2>
+          {{ icecreams|safe }}
+        <br>
+        <input type="submit" value="Угостить">
+      </form>
   </body>
 </html>
