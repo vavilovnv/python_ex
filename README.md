@@ -1,7 +1,7 @@
 # Python exercises :smile:
 :hankey: ~Осторожно, много говнокода созданного в процессе обучения~
 
-Решение задач из курсов stepik.org по программированию на Python:
+Решение задач из курсов по программированию на Python:
 - [x] [Adaptive Python Trainer](https://stepik.org/course/431/info)
 - [ ] [Algorithms: theory and practice. Methods](https://stepik.org/course/217/syllabus)
 - [x] [Programming with Python](https://stepik.org/course/67/syllabus)
