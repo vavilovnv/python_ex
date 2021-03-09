@@ -1,5 +1,5 @@
 # Python exercises :smile:
-:hankey: ~Осторожно, много говнокода созданного в процессе обучения~
+:hankey: ~Осторожно, возможен говнокод созданный в процессе обучения~
 
 Решение задач из курсов по программированию на Python:
 - [x] [Adaptive Python Trainer](https://stepik.org/course/431/info)
@@ -8,5 +8,8 @@
 - [x] [Python basics and applications](https://stepik.org/course/512/syllabus)
 - [x] [Python for solving practical problems](https://stepik.org/course/4519/syllabus)
 - [x] [Yandex praktikum Python Basics](https://praktikum.yandex.ru/backend-developer)
+
+Решение тестовых задач:
+- Test tasks (unsorted)
 
 ![Python](https://img.shields.io/badge/-Python-blue)
