@@ -12,4 +12,4 @@
 Решение тестовых задач:
 - Test tasks (unsorted)
 
-![Python](https://img.shields.io/badge/-Python-blue)
+![Python](https://img.shields.io/badge/-Python-blue) ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=vavilovnv.python_ex)
