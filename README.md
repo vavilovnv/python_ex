@@ -9,6 +9,9 @@
 - [x] [Python for solving practical problems](https://stepik.org/course/4519/syllabus)
 - [x] [Yandex praktikum Python Basics](https://praktikum.yandex.ru/backend-developer)
 
+Выполнение тестовых заданий курсов по DS на python
+- [ ] [Neural Networks and Text Processing](https://stepik.org/course/54098/syllabus)
+
 Решение тестовых задач:
 - Test tasks (unsorted)
 
