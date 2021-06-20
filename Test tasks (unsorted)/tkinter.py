@@ -2,15 +2,21 @@
 
 from tkinter import *
 
+
 def clicked():
-    lbl.configure(text='Great!')
+    res = f'Hello {txt.get()}!'
+    lbl.configure(text=res)
 
 
 window = Tk()
-window.title('Window title')
+window.title('Welcome program')
 window.geometry('400x200')
-lbl = Label(window, text='Hello world!', font=('Calibry', 25))
+lbl = Label(window, text='Welcome to: ', font=('Calibry', 12))
 lbl.grid(column=0, row=0)
-btn = Button(window, text='Press me', command = clicked, bg='gray', fg='black')
-btn.grid(column=1, row=0)
-window.mainloop()  # без этого бесконечного цикла окно не отобразится
+txt = Entry(window, width=25)
+txt.grid(column=1, row=0)
+btn = Button(window, text='Press me', command = clicked, bg='green', fg='black')
+btn.grid(column=2, row=0)
+lbl = Label(window, text='Hello world!', font=('Calibry', 25))
+lbl.grid(column=0, row=1)
+window.mainloop()  # без этого окно не отобразится
