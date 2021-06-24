@@ -1,7 +1,8 @@
 # пример создания графического интерфейса используя встроенную библиотеку tkinter
 
 from tkinter import *
-from tkinter.ttk import Combobox, Radiobutton
+from tkinter.ttk import Combobox, Radiobutton, Progressbar
+from tkinter import ttk
 
 
 def clicked():
@@ -55,13 +56,21 @@ rad2.grid(column=1, row=3)
 rad3 = Radiobutton(window, text='Moscow', value=3, variable=selected)
 rad3.grid(column=2, row=3)
 
-# Рисуем кнопку
+# рисуем кнопку
 btn2 = Button(window, text='Select me', width=10, command = clicked_radio, bg='blue', fg='black')
 btn2.grid(column=3, row=3)
 
 # выводим текст
 lbl = Label(window, text='Hello world!', font=('Calibry', 25))
 lbl.grid(column=0, row=4)
+
+# рисуем прогрессбар
+style = ttk.Style()
+style.theme_use('default')
+style.configure('black.Horizontal.TProgressbar', background='black')
+bar = Progressbar(window, length=200, style = 'black.Horizontal.TProgressbar')
+bar['value'] = 55
+bar.grid(column=0, row=5)
 
 # отображаем окно
 window.mainloop()
