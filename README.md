@@ -11,7 +11,7 @@
 - [x] [Yandex praktikum Python Basics](https://praktikum.yandex.ru/backend-developer)
 
 Выполнение тестовых заданий курсов по DS на Python:
-- [ ] [Neural Networks and Text Processing](https://stepik.org/course/54098/syllabus)
+- [x] [Neural Networks and Text Processing](https://stepik.org/course/54098/syllabus)
 
 Решение тестовых задач:
 - Test tasks (unsorted)
