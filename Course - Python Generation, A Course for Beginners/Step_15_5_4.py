@@ -8,7 +8,8 @@
 # шаг сдвига (со сдвигом вправо).
 
 def make_shift(c, dct):
-    return dct[dct.find(c) + shift - len(dct)]
+    delta = len(dct) if shift >= 0 else 0
+    return dct[dct.find(c) + shift - delta]
 
 
 def caesar_code():
@@ -29,5 +30,9 @@ def caesar_code():
 
 lower_ru, lower_en = 'абвгдежзийклмнопрстуфхцчшщъыьэюя', 'abcdefghijklmnopqrstuvwxyz'
 upper_ru, upper_en = lower_ru.upper(), lower_en.upper()
-s, alphabet, shift = input('Введите строку: '), input('Укажите язык (ru/en): '), int(input('Укажите сдвиг: '))
-print(caesar_code())
+s, alphabet = input('Введите строку: '), input('Укажите язык (ru/en): ')
+while True:
+    shift = int(input('Укажите сдвиг: '))
+    print(caesar_code())
+    if input('Попробуем еще раз? (yes/no)') == 'no':
+        break
