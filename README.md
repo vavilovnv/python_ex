@@ -9,6 +9,7 @@
 - [x] [Python for solving practical problems](https://stepik.org/course/4519/syllabus)
 - [x] [Python Generation: A Course for Beginners](https://stepik.org/course/58852/syllabus)
 - [ ] [Python Generation: A Course for Advanced](https://stepik.org/course/68343/syllabus)
+- [ ] [Test automation with Selenium and Python](https://stepik.org/course/575/)
 - [x] [Yandex praktikum Python Basics](https://praktikum.yandex.ru/backend-developer)
 
 Выполнение тестовых заданий курсов по DS на Python:
