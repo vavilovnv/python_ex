@@ -11,7 +11,7 @@
 - [x] [Python Generation: A Course for Advanced](https://stepik.org/course/68343/syllabus)
 - [ ] [Python OOP](https://stepik.org/course/116336/syllabus)
 - [ ] [Test automation with Selenium and Python](https://stepik.org/course/575/)
-- [x] [Yandex praktikum Python Basics](https://praktikum.yandex.ru/backend-developer)
+- [ ] [Yandex prakticum Python developer](https://praktikum.yandex.ru/backend-developer)
 
 Выполнение тестовых заданий курсов по DS на Python:
 - [x] [Neural Networks and Text Processing](https://stepik.org/course/54098/syllabus)
