@@ -1,5 +1,5 @@
 # Python exercises :smile:
-:hankey: ~Осторожно, возможен говнокод созданный в процессе обучения~
+:hankey: ~Beware, there may be a codesmells created in the process of learning~
 
 Решение задач из курсов по программированию на Python:
 - [x] [Adaptive Python Trainer](https://stepik.org/course/431/info)
@@ -9,6 +9,7 @@
 - [x] [Python for solving practical problems](https://stepik.org/course/4519/syllabus)
 - [x] [Python Generation: A Course for Beginners](https://stepik.org/course/58852/syllabus)
 - [x] [Python Generation: A Course for Advanced](https://stepik.org/course/68343/syllabus)
+- [ ] [Python Generation: A Course for Professionals](https://stepik.org/course/82541/syllabus)
 - [ ] [Python OOP](https://stepik.org/course/116336/syllabus)
 - [ ] [Test automation with Selenium and Python](https://stepik.org/course/575/)
 - [ ] [Yandex prakticum Python developer](https://praktikum.yandex.ru/backend-developer)
