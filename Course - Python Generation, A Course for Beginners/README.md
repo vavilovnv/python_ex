@@ -1,2 +1,2 @@
 # "Поколение Python": курс для начинающих
-Задачи из курса https://stepik.org/course/58852/syllabus
+Решения практических задач из курса ["Поколение Python": курс для начинающих](https://stepik.org/course/58852/syllabus).

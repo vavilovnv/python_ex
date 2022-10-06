@@ -1,2 +1,2 @@
 # Программирование на Python 
-Задачи из курса https://stepik.org/course/67/syllabus
+Решения задач из курса [Программирование на Python](https://stepik.org/course/67/syllabus).

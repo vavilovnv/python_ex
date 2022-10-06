@@ -1,5 +1,5 @@
 # Yandex prakticum Python developer
-Решения некоторых задач из курса https://praktikum.yandex.ru/backend-developer
+Решения некоторых практических задач из курса [Знерщт-разработчик](https://praktikum.yandex.ru/backend-developer).
 
 * [Algorithms](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Yandex%20prakticum%20Python%20developer/Algorithms) - задачи из спринтов по алгоритмам.
 

@@ -1,2 +1,2 @@
 # Адаптивный тренажер Python
-Задачи из курса https://stepik.org/course/431/info
+Решения задач из курса [Адаптивный тренажер Python](https://stepik.org/course/431/info).
