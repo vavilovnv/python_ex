@@ -3,6 +3,7 @@
 
 Решение задач из курсов по программированию на Python:
 - [x] [Adaptive Python Trainer](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Adaptive%20Python%20Trainer)
+- [ ] [Algorithms and data structures](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Algorithms%20and%20data%20structures)
 - [ ] [Algorithms: theory and practice. Methods](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Algorithms%20theory%20and%20practice.%20Methods)
 - [x] [Programming with Python](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20programming%20with%20Python)
 - [x] [Python basics and applications](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20basic%20and%20applications)
