@@ -11,7 +11,7 @@
 - [x] [Python Generation: A Course for Beginners](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Beginners)
 - [x] [Python Generation: A Course for Advanced](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Advanced)
 - [ ] [Python Generation: A Course for Professionals](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Professionals)
-- [ ] [Python OOP](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20OOP)
+- [x] [Python OOP](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20OOP)
 - [ ] [Test automation with Selenium and Python](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Test%20automation%20with%20Selenium%20and%20Python)
 - [ ] [Yandex prakticum Python developer](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Yandex%20prakticum%20Python%20developer)
 
