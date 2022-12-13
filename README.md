@@ -13,7 +13,7 @@
 - [ ] [Python Generation: A Course for Professionals](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Professionals)
 - [x] [Python OOP](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20OOP)
 - [ ] [Test automation with Selenium and Python](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Test%20automation%20with%20Selenium%20and%20Python)
-- [ ] [Yandex prakticum Python developer](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Yandex%20prakticum%20Python%20developer)
+- [x] [Yandex prakticum Python developer](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Yandex%20prakticum%20Python%20developer)
 
 Выполнение тестовых заданий курсов по DS на Python:
 - [x] [Neural Networks and Text Processing](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Neural%20Networks%20and%20Text%20Processing)
