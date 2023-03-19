@@ -1,0 +1,12 @@
+"""
+https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+
+Category - Easy
+
+Given an array nums of integers, return how many of them contain an even
+number of digits.
+"""
+
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        return sum(1 if len(str(i)) % 2 == 0 else 0 for i in nums)
