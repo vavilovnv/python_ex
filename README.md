@@ -10,7 +10,7 @@
 - [x] [Python for solving practical problems](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20for%20solving%20practical%20problems)
 - [x] [Python Generation: A Course for Beginners](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Beginners)
 - [x] [Python Generation: A Course for Advanced](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Advanced)
-- [ ] [Python Generation: A Course for Professionals](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Professionals)
+- [x] [Python Generation: A Course for Professionals](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Professionals)
 - [x] [Python OOP](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20OOP)
 - [ ] [Test automation with Selenium and Python](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Test%20automation%20with%20Selenium%20and%20Python)
 - [x] [Yandex prakticum Python developer](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Yandex%20prakticum%20Python%20developer)
@@ -19,6 +19,6 @@
 - [x] [Neural Networks and Text Processing](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Neural%20Networks%20and%20Text%20Processing)
 
 Решение тестовых задач:
-- [Test tasks (unsorted)](https://github.com/vavilovnv/python_ex/tree/main/Test%20tasks%20(unsorted))
+- [Test tasks: interviews, leetcode, unsorted](https://github.com/vavilovnv/python_ex/tree/main/Test%20tasks%20(unsorted))
 
 ![Python](https://img.shields.io/badge/-Python-blue) ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=vavilovnv.python_ex)
