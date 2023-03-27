@@ -14,3 +14,8 @@ class Solution:
         for i in range(1, len(nums)):
             nums[i] = nums[i] + nums[i - 1]
         return nums
+
+"""
+hint
+start at second elemend and just add i and i-1 elements
+"""
