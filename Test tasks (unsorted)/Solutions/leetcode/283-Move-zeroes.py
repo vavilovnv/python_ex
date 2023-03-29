@@ -19,3 +19,8 @@ class Solution:
                 right -= 1
             else:
                 left += 1
+
+"""
+hint
+if the element is 0 pop it and append to end
+"""

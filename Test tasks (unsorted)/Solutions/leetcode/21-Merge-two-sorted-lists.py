@@ -30,3 +30,8 @@ class Solution:
         if list1 or list2:
             node.next = list1 if list1 else list2
         return head.next
+
+"""
+hint
+use ListNode() for head and then the result will be in head.next
+"""
