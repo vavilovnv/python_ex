@@ -33,5 +33,5 @@ class Solution:
 
 """
 hint
-The rabbit is faster then turtle =)
+The hare is faster then tortoise =)
 """
