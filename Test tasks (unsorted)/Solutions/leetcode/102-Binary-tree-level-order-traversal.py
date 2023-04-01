@@ -34,16 +34,22 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root:
             return []
-        r, next_r = [root], []
-        result, level = [], []
-        while r != []:
-            for root in r:
-                level.append(root.val)
-                if root.left:
-                    next_r.append(root.left)
-                if root.right:
-                    next_r.append(root.right)
-            result.append(level)
-            r = next_r
-            next_r, level = [], []
-        return result
+        res, stack = [], [[root]]
+        while stack:
+            nodes = stack.pop()
+            values, arr_nodes = [], []
+            for node in nodes:
+                values.append(node.val)
+                if node.left:
+                    arr_nodes.append(node.left)
+                if node.right:
+                    arr_nodes.append(node.right)
+            res.append(values)
+            if arr_nodes:
+                stack.append(arr_nodes)
+        return res
+
+"""
+hint
+for iterative solution use stack
+"""
