@@ -57,3 +57,35 @@ class MaxStack(object):
         if self.stack:
             return self.stack[-1][1]
         raise Exception('Стек пустой')
+
+
+"""
+Написать очередь с константным поиском максимального элемента.
+
+push, pop, max должны работать за O(1).
+
+P.s. Задачи на интевью не было, но интерьювер заметил, что есть и такая.
+"""
+
+class MaxStack(object):
+    def __init__(self):
+        self.queue = []
+        self.max = []
+
+    def push(self, elem):
+        if not self.max or self.max[-1] < elem:
+            self.max.append(elem)
+        self.queue.append(elem)
+
+    def pop(self) -> int:
+        if self.queue:
+            m = self.queue.pop(0)
+            if m == self.max[-1]:
+                self.max.pop()
+            return m
+        raise Exception('Очередь пуста')
+
+    def max(self) -> int:
+        if self.max:
+            return self.max[-1]
+        raise Exception('Очередь пуста')
