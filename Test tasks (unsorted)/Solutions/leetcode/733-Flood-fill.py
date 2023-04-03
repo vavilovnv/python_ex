@@ -38,6 +38,6 @@ class Solution:
 
 """
 hint
-use bfs while 0 <= row < m and 0 <= column < n and
+use Depth-First Search (dfs) while 0 <= row < m and 0 <= column < n and
 image[row][column] == prev_color
 """
