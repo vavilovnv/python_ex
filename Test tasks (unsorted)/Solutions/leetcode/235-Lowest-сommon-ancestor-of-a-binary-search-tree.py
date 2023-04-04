@@ -1,43 +1,48 @@
 """
-https://leetcode.com/problems/delete-node-in-a-linked-list/
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 
 Category - Medium
 
-There is a singly-linked list head and we want to delete a node node in it.
+Given a binary search tree (BST), find the lowest common ancestor (LCA) node
+of two given nodes in the BST.
 
-You are given the node to be deleted node. You will not be given access to the
-first node of head.
-
-All the values of the linked list are unique, and it is guaranteed that the
-given node node is not the last node in the linked list.
-
-Delete the given node. Note that by deleting the node, we do not mean removing
-it from memory. We mean:
-
-The value of the given node should not exist in the linked list.
-The number of nodes in the linked list should decrease by one.
-All the values before node should be in the same order.
-All the values after node should be in the same order.
-
-Custom testing:
-For the input, you should provide the entire linked list head and the node to
-be given node. node should not be the last node of the list and should be an
-actual node in the list.
-We will build the linked list and pass the node to your function.
-The output will be the entire list after calling your function.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor
+is defined between two nodes p and q as the lowest node in T that has both p
+and q as descendants (where we allow a node to be a descendant of itself).”
 """
 
-# Definition for singly-linked list.
-# class ListNode:
+# Definition for a binary tree node.
+# class TreeNode:
 #     def __init__(self, x):
 #         self.val = x
-#         self.next = None
+#         self.left = None
+#         self.right = None
 
+# recursive solution
 class Solution:
-    def deleteNode(self, node):
-        """
-        :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
-        """
-        node.val = node.next.val
-        node.next = node.next.next
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if not root or not p or not q:
+            return
+        if max(p.val, q.val) < root.val:
+            return self.lowestCommonAncestor(root.left, p, q)
+        elif min(p.val, q.val) > root.val:
+            return self.lowestCommonAncestor(root.right, p, q)
+        else:
+            return root
+
+# iterative solution
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        while root:
+            if max(p.val, q.val) < root.val:
+                root = root.left
+            elif min(p.val, q.val) > root.val:
+                root = root.right
+            else:
+                return root
+
+"""
+hint
+go to the left if root.val > max((p.val, q.val), 
+go right if root.val < min(p.val, q.val) or return root
+"""
