@@ -30,5 +30,5 @@ class Solution:
 
 """
 hint
-classic two pointers
+two pointers
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/description/
+https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/
 
 Category - Easy
 
