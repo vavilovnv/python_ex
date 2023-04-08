@@ -12,11 +12,11 @@ not use the same element twice.
 You can return the answer in any order.
 """
 
+# complexity O(n), memory O(n)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         d = {}
         for i, v in enumerate(nums):
-            x = target - v
             if v in d:
                 return [i, d[v]]
-            d[x] = i
+            d[target - v] = i
