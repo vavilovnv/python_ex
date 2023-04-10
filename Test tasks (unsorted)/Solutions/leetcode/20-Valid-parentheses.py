@@ -18,7 +18,7 @@ class Solution:
         for i in s:
             if i in '([{':
                 stack.append(i)
-            if i in ')]}':
+            else:
                 if not stack:
                     return False
                 if i == ')' and stack[-1] != '(':
