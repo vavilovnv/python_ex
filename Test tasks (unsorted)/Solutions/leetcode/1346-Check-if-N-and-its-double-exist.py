@@ -10,7 +10,7 @@ i != j
 arr[i] == 2 * arr[j]
 """
 
-# O(nlog(n))
+# TC: O(nlog(n))
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         arr.sort()
@@ -27,13 +27,23 @@ class Solution:
                     right = mid - 1
         return False
 
-# O(n^2)
+# TC: O(n^2)
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         for i, v in enumerate(arr):
             for j, v2 in enumerate(arr):
                 if i != j and 2 * v == v2:
                     return True
+        return False
+    
+# TC: O(n) i guess
+class Solution:
+    def checkIfExist(self, arr: List[int]) -> bool:
+        s = set()
+        for i in arr:
+            if i * 2 in s or i / 2 in s:
+                return True
+            s.add(i)
         return False
 
 """
