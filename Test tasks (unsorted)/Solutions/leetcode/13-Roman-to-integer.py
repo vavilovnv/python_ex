@@ -34,20 +34,14 @@ Given a roman numeral, convert it to an integer.
 class Solution:
     def romanToInt(self, s: str) -> int:
         d = {
-            'I': 1, 'IV': 4, 'V': 5, 'IX': 9, 'X': 10, 'XL': 40, 'L': 50,
-            'XC': 90, 'C': 100, 'CD': 400, 'D': 500, 'CM': 900, 'M': 1000
+            'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000
         }
         res, i, len_s = 0, 0, len(s)
         while i < len_s:
-            if s[i:i+2] in d:
-                res += d[s[i:i+2]]
+            if i < len_s - 1 and d[s[i]] < d[s[i+1]]:
+                res += d[s[i+1]] - d[s[i]]
                 i += 2
             else:
                 res += d[s[i]]
                 i += 1
         return res
-        
-"""
-hint
-Just add IV, IX, XL, XC, CD, CM to dict
-"""
