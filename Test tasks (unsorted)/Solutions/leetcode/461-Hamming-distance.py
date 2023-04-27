@@ -9,6 +9,7 @@ the corresponding bits are different.
 Given two integers x and y, return the Hamming distance between them.
 """
 
+# use format(a, '0b'), not bin(a) to add prefix '0' * diff(len_a, len_b)
 class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
         a, b, res = format(x, '0b'), format(y, '0b'), 0
@@ -22,8 +23,13 @@ class Solution:
                 res += 1
         return res
 
-"""
-hint
-use format(a, '0b'), not bin(a) to add prefix '0' * diff(len_a, len_b)
-"""
+# simulation
+class Solution:
+    def hammingDistance(self, x: int, y: int) -> int:
+        res = 0
+        while x or y:
+            res += (x & 1) != (y & 1)
+            x >>= 1
+            y >>= 1
+        return res
         
