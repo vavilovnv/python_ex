@@ -20,6 +20,7 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
 #         self.val = x
 #         self.next = None
 
+# The hare and tortoise =)
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         if not head:
@@ -31,7 +32,14 @@ class Solution:
             slow, fast = slow.next, fast.next.next
         return False
 
-"""
-hint
-The hare is faster then tortoise =)
-"""
+# Solution with set
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        s, node = set(), head
+        while node:
+            if node not in s:
+                s.add(node)
+            else:
+                return True
+            node = node.next
+        return False
