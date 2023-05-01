@@ -8,11 +8,17 @@ and returns the number of '1' bits it has (also known as the Hamming weight).
 
 """
 
+# with bin func
 class Solution:
     def hammingWeight(self, n: int) -> int:
         return bin(n).count('1')
 
-"""
-hint
-use the bin function to convert n in binary string
-"""
+
+# bitwise solution
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        res = 0
+        while n:
+            res += n & 1
+            n >>= 1
+        return res
