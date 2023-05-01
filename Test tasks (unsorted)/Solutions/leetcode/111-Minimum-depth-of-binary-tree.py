@@ -17,6 +17,8 @@ Note: A leaf is a node with no children.
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+# recursive solution
 class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
         def helper(root):
@@ -30,3 +32,20 @@ class Solution:
                 return 1 + left
             return 1 + min(left, right)
         return helper(root)
+
+# iterative solution
+class Solution:
+    def minDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+        q, level = deque([root]), 0
+        while q:
+            level += 1
+            for _ in range(len(q)):
+                node = q.popleft()
+                if not node.left and not node.right:
+                    return level
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
