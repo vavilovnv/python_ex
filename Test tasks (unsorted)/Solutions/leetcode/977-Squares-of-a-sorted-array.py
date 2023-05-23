@@ -7,6 +7,7 @@ Given an integer array nums sorted in non-decreasing order, return an array of
 the squares of each number sorted in non-decreasing order.
 """
 
+# TC: O(n) SC: O(n)
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         res, left, right = [], 0, len(nums) - 1
@@ -19,7 +20,7 @@ class Solution:
                 right -= 1
         return res[::-1]
         
-# cheating solution
+# TC: O(nlogn) SC: O(1)
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         return sorted(i ** 2 for i in nums)
