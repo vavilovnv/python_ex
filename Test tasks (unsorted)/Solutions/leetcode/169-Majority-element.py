@@ -16,7 +16,7 @@ class Solution:
             if num == res:
                 count += 1
             elif count == 0:
-                count, res = 0, num
+                res = num
             else:
                 count -= 1
-        return res    
+        return res
