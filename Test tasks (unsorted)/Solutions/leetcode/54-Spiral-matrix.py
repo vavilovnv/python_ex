@@ -27,3 +27,10 @@ class Solution:
                     res.append(matrix[i][left])
                 left += 1
         return res
+
+# magic solution =))
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        if not matrix:
+            return []
+        return [*matrix.pop(0)] + self.spiralOrder((list(zip(*matrix))[::-1]))
