@@ -20,3 +20,12 @@ class Solution:
             if prices[i+1] > prices[i]:
                 res += prices[i+1] - prices[i]
         return res
+
+class Solution:
+    def maxProfit(self, prices: List[int], fee: int) -> int:
+        buy, sell = float("-inf"), 0  # in sell we have current balance - that's the point
+        for price in prices:
+            next_buy = max(buy, sell - price)
+            next_sell = max(sell, buy + price)
+            buy, sell = next_buy, next_sell
+        return sell

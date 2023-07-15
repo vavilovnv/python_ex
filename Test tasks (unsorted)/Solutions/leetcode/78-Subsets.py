@@ -10,6 +10,7 @@ The solution set must not contain duplicate subsets. Return the solution in
 any order.
 """
 
+# backtracking solution
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         def helper(start, subset):
@@ -22,7 +23,10 @@ class Solution:
         helper(0, [])
         return res
 
-"""
-hint
-use backtracking
-"""
+# iterable solution
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        res = [[]]
+        for num in nums:
+            res += [subset + [num] for subset in res]
+        return res
