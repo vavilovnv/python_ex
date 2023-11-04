@@ -1,5 +1,5 @@
 # Python exercises :smile:
-:hankey: ~Beware, there may be a codesmells created in the process of learning~
+:hankey: ~Beware a codesmells created in the process of learning~
 
 Решение задач из курсов по программированию на Python:
 - [x] [Adaptive Python Trainer](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Adaptive%20Python%20Trainer)
@@ -11,6 +11,7 @@
 - [x] [Python Generation: A Course for Beginners](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Beginners)
 - [x] [Python Generation: A Course for Advanced](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Advanced)
 - [x] [Python Generation: A Course for Professionals](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20Generation%2C%20A%20Course%20for%20Professionals)
+- [ ] [Python Generation: OOP](https://github.com/vavilovnv/python_ex/tree/main/)
 - [x] [Python OOP](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Python%20OOP)
 - [ ] [Test automation with Selenium and Python](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Test%20automation%20with%20Selenium%20and%20Python)
 - [x] [Yandex prakticum Python developer](https://github.com/vavilovnv/python_ex/tree/main/Course%20-%20Yandex%20prakticum%20Python%20developer)
