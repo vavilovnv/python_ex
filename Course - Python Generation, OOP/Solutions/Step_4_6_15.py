@@ -1,4 +1,4 @@
-# Условие задачи https://stepik.org/lesson/801862/step/15?unit=804839
+# Условие задачи https://stepik.org/lesson/801862/step/15
 
 """
 Класс QuadraticPolynomial

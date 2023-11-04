@@ -1,4 +1,4 @@
-# Условие задачи https://stepik.org/lesson/805932/step/14?unit=809059
+# Условие задачи https://stepik.org/lesson/805932/step/14
 
 """
 Класс Matrix 🌶️🌶️

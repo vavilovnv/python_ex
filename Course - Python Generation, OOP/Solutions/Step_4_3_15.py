@@ -1,4 +1,4 @@
-# Условие задачи https://stepik.org/lesson/794582/step/15?unit=797335
+# Условие задачи https://stepik.org/lesson/794582/step/15
 
 """
 Класс Wordplay

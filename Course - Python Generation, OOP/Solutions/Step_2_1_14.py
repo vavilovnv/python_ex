@@ -1,4 +1,4 @@
-# Условие задачи https://stepik.org/lesson/794484/step/14?unit=797232
+# Условие задачи https://stepik.org/lesson/794484/step/14
 
 """
 Функция is_fraction()

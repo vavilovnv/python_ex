@@ -1,4 +1,4 @@
-# Условие задачи https://stepik.org/lesson/793864/step/17?unit=796596
+# Условие задачи https://stepik.org/lesson/793864/step/17
 
 """
 Класс User
