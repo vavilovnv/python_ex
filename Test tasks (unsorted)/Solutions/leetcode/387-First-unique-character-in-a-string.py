@@ -9,9 +9,7 @@ index. If it does not exist, return -1.
 
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        d = defaultdict(int)
-        for v in s:
-            d[v] += 1
+        d = Counter(s)
         for i, v in enumerate(s):
             if d[v] == 1:
                 return i
