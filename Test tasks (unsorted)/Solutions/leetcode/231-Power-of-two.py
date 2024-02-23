@@ -14,10 +14,7 @@ n == 2^x.
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
         if n <= 2:
-            if n in [1, 2]:
-                return True
-            else:
-                return False
+            return (False, True)[n in {1, 2}]
         return self.isPowerOfTwo(n / 2)
 
 
