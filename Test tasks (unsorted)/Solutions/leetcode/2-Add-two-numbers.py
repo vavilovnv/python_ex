@@ -12,6 +12,8 @@ You may assume the two numbers do not contain any leading zero, except the
 number 0 itself.
 """
 
+# approach with 2 additional lists
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -36,3 +38,31 @@ class Solution:
             else:
                 l3 = ListNode(int(v), l3)
         return l3
+
+# approach without 2 additional lists
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        tmp, dummy = 0, ListNode(0)
+        curr = dummy
+        
+        curr1, curr2 = l1, l2
+        while curr1 and curr2:
+            val = curr1.val + curr2.val + tmp
+            tmp = val // 10
+            curr.next = ListNode(val % 10)
+            curr = curr.next
+            curr1 = curr1.next
+            curr2 = curr2.next
+
+        curr3 = curr1 or curr2
+        while curr3:
+            val = curr3.val + tmp
+            tmp = val // 10
+            curr.next = ListNode(val % 10)
+            curr = curr.next
+            curr3 = curr3.next
+        
+        if tmp:
+            curr.next = ListNode(tmp)
+            
+        return dummy.next
