@@ -12,13 +12,6 @@ here.
 
 class Solution:
     def longestPalindrome(self, s: str) -> int:
-        d = {}
-        for i in s:
-            d[i] = d.get(i, 0) + 1
-        odds = 1 if sum(v % 2 for v in d.values()) else 0
+        d = Counter(s)
+        odds = 1 if any(v % 2 for v in d.values()) else 0
         return sum(v // 2 * 2 for v in d.values()) + odds
-
-"""
-hint
-use dict, count even of all chars, add 1 odd if it exists
-"""
