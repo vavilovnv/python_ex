@@ -15,10 +15,8 @@ class Solution:
     def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
         res, d = [], Counter(arr1)
         for i in arr2:
-            for _ in range(d[i]):
-                res.append(i)
+            res.extend([i] * d[i])
             d.pop(i)
         for k in sorted(d):
-            for _ in range(d[k]):
-                res.append(k)
+            res.extend([k] * d[k])
         return res
