@@ -23,30 +23,18 @@ Tests are generated such that the answer will not exceed 107 and hour will
 have at most two digits after the decimal point.
 """
 
+from math import ceil
+
 class Solution:
     def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
-        if len(dist) == 1:
-            return ceil(round(dist[0] / hour, 2))
-        if len(dist) - 1 >= hour:
-            return -1
-        
-        hour_for_last = round(hour - len(dist) + 1, 2)
-        min_speed = max_speed = ceil(dist[-1] / hour_for_last)
-        if round(hour % 1, 2):
-            max_speed = ceil(dist[-1] / round(hour % 1, 2))
-        result = max_speed = max(max_speed, max(dist))
-        if hour_for_last <= 1:
-            return max_speed
-        
-        while min_speed <= max_speed:
-            mid_speed, hours_count = (min_speed + max_speed) // 2, 0
-            for i in range(len(dist) - 1):
-                hours_count += ceil(dist[i] / mid_speed)
-            hours_count += dist[-1] / mid_speed
-            if 0 <= round(hour - hours_count, 2):
-                result = min(result, mid_speed)
-            if round(hour - hours_count, 2) > 0:
-                max_speed = mid_speed - 1
+        left, right = 1, 10 ** 7
+        res = -1
+        while left <= right:
+            mid = left + (right - left) // 2
+            tmp_h = sum([ceil(d / mid) for d in dist[:-1]]) + dist[-1] / mid
+            if tmp_h <= hour:
+                res = mid
+                right = mid - 1
             else:
-                min_speed = mid_speed + 1
-        return result
+                left = mid + 1
+        return res
