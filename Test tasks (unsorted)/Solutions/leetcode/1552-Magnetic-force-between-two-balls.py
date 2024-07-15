@@ -22,9 +22,9 @@ class Solution:
         while left <= right:
             mid = left + (right - left) // 2
             last_pos, balls = position[0], 1
-            for i in range(len(position)):
-                if position[i] - last_pos >= mid:
-                    last_pos = position[i]
+            for i, p in enumerate(position):
+                if p - last_pos >= mid:
+                    last_pos = p
                     balls += 1
             if balls >= m:
                 left = mid + 1
