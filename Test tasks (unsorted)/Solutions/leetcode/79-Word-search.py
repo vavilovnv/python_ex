@@ -13,26 +13,33 @@ cell may not be used more than once.
 
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
-        def helper(x, y, ind):
-            if ind == len(word):
+        n, m, visited = len(board), len(board[0]), set()
+        moves = ((1, 0), (-1, 0), (0, 1), (0, -1))
+
+        def dfs(row, col, idx):
+            if len(word) == idx:
                 return True
-            if (x < 0 or y < 0 
-                or x >= n or y >= m
-                or board[x][y] != word[ind]
-                or (x, y) in visited):
+
+            if (
+                row >= n or row < 0
+                or col >= m or col < 0
+                or (row, col) in visited
+                or board[row][col] != word[idx]
+            ):
                 return False
+
             res = False
-            visited.add((x, y))
-            for move_i, move_j in moves:
-                res = res or helper(x + move_i, y + move_j, ind + 1)
-            visited.remove((x, y))
+            visited.add((row, col))
+            for move in moves:
+                if dfs(row + move[0], col + move[1], idx + 1):
+                    res = True
+                    break
+            visited.remove((row, col))
+
             return res
 
-        visited = set()
-        n, m = len(board), len(board[0])
-        moves = [(-1, 0), (1, 0), (0, 1), (0, -1)]
         for i in range(n):
             for j in range(m):
-                if helper(i, j, 0):
+                if dfs(i, j, 0):
                     return True
         return False
