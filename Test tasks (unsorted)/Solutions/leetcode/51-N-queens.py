@@ -16,26 +16,32 @@ respectively.
 
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
-        solutions, column = [], set()
-        board = [['.'] * n for _ in range(n)]
-        pos_d, neg_d = set(), set()
+        res, board = [], [["."] * n for _ in range(n)]
+        cols, pos_diag, neg_diag = set(), set(), set()
 
-        def backtrack(row):
+        def backtracking(row):
             if row == n:
-                solutions.append(["".join(row) for row in board])
+                res.append(["".join(r) for r in board])
                 return
-            for c in range(n):
-                if row + c in pos_d or row - c in neg_d or c in column:
-                    continue
-                column.add(c)
-                neg_d.add(row - c)
-                pos_d.add(row + c)
-                board[row][c] = 'Q'
-                backtrack(row + 1)
-                column.remove(c)
-                neg_d.remove(row - c)
-                pos_d.remove(row + c)
-                board[row][c] = '.'
 
-        backtrack(0)
-        return solutions
+            for col in range(n):
+                if (
+                    col in cols or
+                    col + row in pos_diag or
+                    col - row in neg_diag
+                ):
+                    continue 
+
+                board[row][col] = "Q"
+                cols.add(col)
+                pos_diag.add(col + row)
+                neg_diag.add(col - row)
+                backtracking(row + 1)
+                cols.remove(col)
+                pos_diag.remove(col + row)
+                neg_diag.remove(col - row)
+                board[row][col] = "."
+
+        backtracking(0)
+
+        return res

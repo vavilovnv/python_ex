@@ -12,26 +12,34 @@ puzzle.
 
 class Solution:
     def totalNQueens(self, n: int) -> int:
-        solutions, column = [], set()
+        self.res = 0
         board = [['.'] * n for _ in range(n)]
-        pos_d, neg_d = set(), set()
+        cols, pos_diag, neg_diag = set(), set(), set()
 
         def backtrack(row):
             if row == n:
-                solutions.append(["".join(row) for row in board])
+                self.res += 1
                 return
-            for c in range(n):
-                if row + c in pos_d or row - c in neg_d or c in column:
+
+            for col in range(n):
+                if (
+                    row + col in pos_diag 
+                    or row - col in neg_diag 
+                    or col in cols
+                ):
                     continue
-                column.add(c)
-                neg_d.add(row - c)
-                pos_d.add(row + c)
-                board[row][c] = 'Q'
+
+                cols.add(col)
+                neg_diag.add(row - col)
+                pos_diag.add(row + col)
+                board[row][col] = 'Q'
+
                 backtrack(row + 1)
-                column.remove(c)
-                neg_d.remove(row - c)
-                pos_d.remove(row + c)
-                board[row][c] = '.'
+
+                cols.remove(col)
+                neg_diag.remove(row - col)
+                pos_diag.remove(row + col)
+                board[row][col] = '.'
 
         backtrack(0)
-        return len(solutions)
+        return self.res
