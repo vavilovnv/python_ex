@@ -14,18 +14,18 @@ You may return the answer in any order.
 
 class Solution:
     def two_sum(self, start, target):
-        left, right = start, len(self.nums) - 1
-        while left < right:
-            val = self.nums[left] + self.nums[right]
-            if val < target:
-                left += 1
-            elif val > target:
-                right -= 1
-            else:
-                self.result.append(self.prefix + [self.nums[left], self.nums[right]])
-                left += 1
-                while left < right and self.nums[left] == self.nums[left - 1]:
+            left, right = start, len(self.nums) - 1
+            while left < right:
+                val = self.nums[left] + self.nums[right]
+                if val < target:
                     left += 1
+                elif val > target:
+                    right -= 1
+                else:
+                    self.res.append(self.prefix + [self.nums[left], self.nums[right]])
+                    left += 1
+                    while left < right and self.nums[left] == self.nums[left - 1]:
+                        left += 1
 
     def n_sum(self, n, start, target):
         if n == 2:
@@ -39,13 +39,12 @@ class Solution:
             self.n_sum(n - 1, i + 1, target - self.nums[i])
             self.prefix.pop()
 
-
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-        self.result = []
-        self.prefix = []
         self.nums = nums
-
         self.nums.sort()
+
+        self.res = []
+        self.prefix = []
         self.n_sum(4, 0, target)
 
-        return self.result
+        return self.res  
