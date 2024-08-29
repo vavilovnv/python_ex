@@ -20,11 +20,13 @@ class Node:
 
 class Solution:
     def postorder(self, root: 'Node') -> List[int]:
+        res = []
+
         def helper(root):
             if root:
-                for children in root.children:
-                    helper(children)
+                for node in root.children:
+                    helper(node)
                 res.append(root.val)
-        res = []
+        
         helper(root)
         return res
