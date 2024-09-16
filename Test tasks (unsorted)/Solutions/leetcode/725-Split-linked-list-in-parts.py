@@ -27,18 +27,19 @@ class Solution:
         if not root:
             return [None for i in range(k)]
         res, len_list = [], 0
+        
         while root:
             len_list += 1
             root = root.next
-        n, p = divmod(len_list, k)
         root = head
+
+        count, change = divmod(len_list, k)
         for _ in range(k):
             new_root = ListNode()
             new_head = new_root
-            for _ in range(n + (p > 0)):
+            for _ in range(count + (change > 0)):
                 new_root.next, root, new_root = root, root.next, root
-            if p > 0:
-                p -= 1
             new_root.next = None
             res.append(new_head.next)
+            change -= 1
         return res
