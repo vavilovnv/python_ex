@@ -11,16 +11,9 @@ The test cases are generated so that the answer can fit in a 32-bit integer.
 
 class Solution:
     def combinationSum4(self, nums: List[int], target: int) -> int:
-        nums.sort()
-        if target < nums[0]:
-            return 0
-        lst = [0 for i in range(target+1)]
-        for i in range(target, -1, -1):
-            for j in nums:
-                if i + j > target:
-                    break
-                if i + j < target:
-                    lst[i] = lst[i] + lst[i+j]
-                else:
-                    lst[i] += 1
-        return lst[0]
+        dp = {0: 1}
+        for i in range(1, target + 1):
+            dp[i] = 0
+            for num in nums:
+                dp[i] += dp.get(i - num, 0)
+        return dp[target]

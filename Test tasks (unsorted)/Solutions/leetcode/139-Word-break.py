@@ -12,14 +12,13 @@ segmentation.
 
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        @lru_cache()
+        @cache
         def helper(s):
             if not s:
                 return True
             for word in wordDict:
-                len_word = len(word)
-                if word == s[:len_word]:
-                    if helper(s[len_word:]):
-                        return True
+                if s.startswith(word) and helper(s[len(word):]):
+                    return True
             return False
+
         return helper(s)
