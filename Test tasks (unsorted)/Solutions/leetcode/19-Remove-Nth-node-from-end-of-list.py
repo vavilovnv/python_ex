@@ -14,8 +14,6 @@ and return its head.
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        if not head.next:
-            return None
         fast = slow = head
         for _ in range(n):
             fast = fast.next
