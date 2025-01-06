@@ -23,24 +23,24 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        if not head: 
-            return []
-        slow, fast = head, head
+        fast = slow = head
         while fast.next and fast.next.next:
             slow = slow.next
             fast = fast.next.next
         
-        prev, curr = None, slow.next
+        curr, prev = slow.next, None
         while curr:
-            temp = curr.next
+            tmp = curr.next
             curr.next = prev
             prev = curr
-            curr = temp    
-        slow.next = None
+            curr = tmp
         
-        head1, head2 = head, prev
-        while head2:
-            temp = head1.next
-            head1.next = head2
-            head1 = head2
-            head2 = temp
+        slow.next = None
+
+        curr1, curr2 = head, prev
+        while curr2:
+            tmp1, tmp2 = curr1.next, curr2.next
+            curr1.next, curr2.next = curr2, tmp1
+            curr1, curr2 = tmp1, tmp2
+
+        return head
