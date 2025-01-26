@@ -9,26 +9,17 @@
 - [1, 4] => "1,4"
 """
 
-def group_out(g_start, g_end):
-    if g_start == g_end:
-        return str(g_end)
-    return f'{g_start}-{g_end}'
-
-
-def compress(l):
-    if not l:
-        return ''
-    l = sorted(l)
-    res, g_start, g_end = [], l[0], l[0]
-    for n in l[1:]:
-        if g_end == n-1:
-            g_end = n
-        else:
-            res.append(group_out(g_start, g_end))
-            g_start = n
-            g_end = n
-    res.append(group_out(g_start, g_end))
-    return ','.join(res)
+def solution(arr):
+    res = []
+    arr.sort()
+    curr = curr_min = arr[0]
+    for num in arr:
+        if num - curr > 1:
+            res.append(f"{curr_min}-{curr}" if curr_min != curr else str(curr))
+            curr_min = num
+        curr = num
+    res.append(f"{curr_min}-{curr}" if curr_min != curr else str(curr))
+    return ",".join(res)
 
 
 """
@@ -36,27 +27,24 @@ def compress(l):
 
 push, pop, max должны работать за O(1).
 """
-class MaxStack(object):
+class Stack:
     def __init__(self):
         self.stack = []
- 
-    def push(self, elem):
-        if not self.stack:
-            self.stack.append((elem, elem))
-        else:
-            m = max(self.stack[-1][1], elem)    
-            self.stack.append((elem, m))        
 
-    def pop(self) -> int:
-        if self.stack:
-            m = self.stack.pop()
-            return m[0]
-        raise Exception('Стек пустой')
+    def push(self, item):
+        self.stack.append((item, item if not self.stack else max(item, self.stack[-1][1])))
 
-    def max(self) -> int:
+    def pop(self):
         if self.stack:
-            return self.stack[-1][1]
-        raise Exception('Стек пустой')
+            raise ValueError("Стек пустой")
+        value, _ = self.stack.pop()
+        return value
+
+    def max(self):
+        if self.stack:
+            raise ValueError("Стек пустой")
+        _, max_value = self.stack[-1][1]
+        return max_value
 
 
 """
