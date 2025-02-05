@@ -21,14 +21,12 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        nums1.extend(nums2)
-        nums1.sort()
-        i, changed = 0, False
-        while len(nums1) != m + n:
-            if nums1[i] == 0:
-                nums1.pop(i)
-                changed = True
+        k = m + n - 1
+        while n > 0:
+            if m > 0 and nums1[m - 1] > nums2[n - 1]:
+                nums1[k] = nums1[m - 1]
+                m -= 1
             else:
-                if changed:
-                    break
-                i += 1
+                nums1[k] = nums2[n - 1]
+                n -= 1
+            k -= 1

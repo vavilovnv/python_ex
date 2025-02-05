@@ -10,13 +10,11 @@ arr = ['a', 'b', 'c', ' ', ' ', ' ', ' ']
 """
 
 def solution(arr):
-    left = right = 0
-    while right < len(arr) :
+    left = 0
+    for right in range(len(arr)) :
         if arr[right] != ' ':
-            if arr[left] == ' ':
-                arr[left], arr[right] = arr[right], arr[left]
+            arr[left], arr[right] = arr[right], arr[left]
             left += 1
-        right += 1
 
 
 arr = ['a', ' ', ' ', 'b', ' ', ' ', 'c']
